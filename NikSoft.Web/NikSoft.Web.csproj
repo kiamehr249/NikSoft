@@ -1,0 +1,1562 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2036B8CD-3108-4F24-8B04-311ED538763D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NikSoft.Web</RootNamespace>
+    <AssemblyName>NikSoft.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended, Version=6.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Ado, Version=1.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glimpse.Ado.1.7.3\lib\net45\Glimpse.Ado.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.AspNet, Version=1.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glimpse.AspNet.1.9.1\lib\net45\Glimpse.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Core, Version=1.8.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glimpse.1.8.6\lib\net45\Glimpse.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.EF6, Version=1.6.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glimpse.EF6.1.6.5\lib\net45\Glimpse.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.WebForms, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glimpse.WebForms.1.1.1\lib\net45\Glimpse.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="StructureMap">
+      <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="contents\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="contents\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="contents\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="contents\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="contents\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="contents\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="contents\FileManeager\fileman\css\images\animated-overlay.gif" />
+    <Content Include="contents\FileManeager\fileman\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="contents\FileManeager\fileman\css\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="contents\FileManeager\fileman\css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="contents\FileManeager\fileman\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="contents\FileManeager\fileman\css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="contents\FileManeager\fileman\css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="contents\FileManeager\fileman\css\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="contents\FileManeager\fileman\css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="contents\FileManeager\fileman\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="contents\FileManeager\fileman\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="contents\FileManeager\fileman\css\images\ui-icons_454545_256x240.png" />
+    <Content Include="contents\FileManeager\fileman\css\images\ui-icons_888888_256x240.png" />
+    <Content Include="contents\FileManeager\fileman\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="contents\FileManeager\fileman\css\jquery-ui-1.10.4.custom.css" />
+    <Content Include="contents\FileManeager\fileman\css\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="contents\FileManeager\fileman\css\main.css" />
+    <Content Include="contents\FileManeager\fileman\css\main.min.css" />
+    <Content Include="contents\FileManeager\fileman\dev.html" />
+    <Content Include="contents\FileManeager\fileman\images\action-folder-paste.png" />
+    <Content Include="contents\FileManeager\fileman\images\action-folder-rename.png" />
+    <Content Include="contents\FileManeager\fileman\images\arrow_down.png" />
+    <Content Include="contents\FileManeager\fileman\images\arrow_up.png" />
+    <Content Include="contents\FileManeager\fileman\images\blank.gif" />
+    <Content Include="contents\FileManeager\fileman\images\copy.png" />
+    <Content Include="contents\FileManeager\fileman\images\cut.png" />
+    <Content Include="contents\FileManeager\fileman\images\dir-minus.png" />
+    <Content Include="contents\FileManeager\fileman\images\dir-plus.png" />
+    <Content Include="contents\FileManeager\fileman\images\file-add.png" />
+    <Content Include="contents\FileManeager\fileman\images\file-delete.png" />
+    <Content Include="contents\FileManeager\fileman\images\file-download.png" />
+    <Content Include="contents\FileManeager\fileman\images\file-duplicate.png" />
+    <Content Include="contents\FileManeager\fileman\images\file-upload.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_3gp.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_7z.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_ace.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_ai.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_aif.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_aiff.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_amr.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_asf.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_asx.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_bat.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_bin.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_bmp.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_bup.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_cab.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_cbr.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_cda.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_cdl.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_cdr.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_chm.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_dat.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_divx.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_dll.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_dmg.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_doc.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_dss.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_dvf.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_dwg.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_eml.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_eps.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_exe.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_fla.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_flv.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_gif.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_gz.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_hqx.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_htm.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_html.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_ifo.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_indd.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_iso.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_jar.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_jpeg.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_jpg.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_lnk.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_log.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_m4a.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_m4b.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_m4p.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_m4v.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_mcd.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_mdb.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_mid.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_mov.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_mp2.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_mp3.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_mp4.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_mpeg.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_mpg.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_msi.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_mswmm.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_ogg.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_pdf.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_png.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_pps.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_ps.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_psd.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_pst.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_ptb.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_pub.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_qbb.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_qbw.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_qxd.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_ram.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_rar.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_rm.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_rmvb.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_rtf.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_sea.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_ses.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_sit.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_sitx.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_ss.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_swf.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_tgz.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_thm.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_tif.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_tmp.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_torrent.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_ttf.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_txt.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_vcd.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_vob.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_wav.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_wma.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_wmv.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_wps.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_xls.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_xpi.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\file_extension_zip.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\big\unknown.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_3gp.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_7z.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_ace.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_ai.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_aif.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_aiff.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_amr.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_asf.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_asx.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_bat.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_bin.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_bmp.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_bup.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_cab.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_cbr.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_cda.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_cdl.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_cdr.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_chm.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_dat.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_divx.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_dll.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_dmg.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_doc.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_dss.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_dvf.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_dwg.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_eml.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_eps.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_exe.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_fla.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_flv.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_gif.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_gz.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_hqx.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_htm.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_html.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_ifo.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_indd.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_iso.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_jar.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_jpeg.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_jpg.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_lnk.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_log.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_m4a.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_m4b.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_m4p.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_m4v.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_mcd.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_mdb.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_mid.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_mov.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_mp2.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_mp3.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_mp4.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_mpeg.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_mpg.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_msi.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_mswmm.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_ogg.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_pdf.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_png.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_pps.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_ps.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_psd.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_pst.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_ptb.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_pub.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_qbb.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_qbw.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_qxd.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_ram.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_rar.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_rm.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_rmvb.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_rtf.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_sea.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_ses.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_sit.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_sitx.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_ss.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_swf.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_tgz.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_thm.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_tif.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_tmp.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_torrent.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_ttf.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_txt.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_vcd.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_vob.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_wav.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_wma.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_wmv.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_wps.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_xls.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_xpi.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\file_extension_zip.png" />
+    <Content Include="contents\FileManeager\fileman\images\filetypes\unknown.png" />
+    <Content Include="contents\FileManeager\fileman\images\find.png" />
+    <Content Include="contents\FileManeager\fileman\images\folder-add.png" />
+    <Content Include="contents\FileManeager\fileman\images\folder-delete.png" />
+    <Content Include="contents\FileManeager\fileman\images\folder-download.png" />
+    <Content Include="contents\FileManeager\fileman\images\folder-green.png" />
+    <Content Include="contents\FileManeager\fileman\images\folder-opened.png" />
+    <Content Include="contents\FileManeager\fileman\images\folder.png" />
+    <Content Include="contents\FileManeager\fileman\images\loading-dir.gif" />
+    <Content Include="contents\FileManeager\fileman\images\loading.gif" />
+    <Content Include="contents\FileManeager\fileman\images\paste.png" />
+    <Content Include="contents\FileManeager\fileman\images\preview.png" />
+    <Content Include="contents\FileManeager\fileman\images\remove-upload - Copy.png" />
+    <Content Include="contents\FileManeager\fileman\images\remove-upload.png" />
+    <Content Include="contents\FileManeager\fileman\images\rename.png" />
+    <Content Include="contents\FileManeager\fileman\images\search.png" />
+    <Content Include="contents\FileManeager\fileman\images\select.png" />
+    <Content Include="contents\FileManeager\fileman\images\sprite.png" />
+    <Content Include="contents\FileManeager\fileman\images\stripes-reverse.gif" />
+    <Content Include="contents\FileManeager\fileman\images\stripes.gif" />
+    <Content Include="contents\FileManeager\fileman\images\upload-big.png" />
+    <Content Include="contents\FileManeager\fileman\images\view-list.png" />
+    <Content Include="contents\FileManeager\fileman\images\view-tile.png" />
+    <Content Include="contents\FileManeager\fileman\index.html" />
+    <Content Include="contents\FileManeager\fileman\js\custom.js" />
+    <Content Include="contents\FileManeager\fileman\js\directory.js" />
+    <Content Include="contents\FileManeager\fileman\js\file.js" />
+    <Content Include="contents\FileManeager\fileman\js\filetypes.js" />
+    <Content Include="contents\FileManeager\fileman\js\jquery-1.10.2.min.js" />
+    <Content Include="contents\FileManeager\fileman\js\jquery-1.11.1.min.js" />
+    <Content Include="contents\FileManeager\fileman\js\jquery-2.1.1.min.js" />
+    <Content Include="contents\FileManeager\fileman\js\jquery-dateFormat.min.js" />
+    <Content Include="contents\FileManeager\fileman\js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="contents\FileManeager\fileman\js\main.js" />
+    <Content Include="contents\FileManeager\fileman\js\main.min.js" />
+    <Content Include="contents\FileManeager\fileman\js\mini-main.js" />
+    <Content Include="contents\FileManeager\fileman\js\tiny_mce_popup.js" />
+    <Content Include="contents\FileManeager\fileman\js\utils.js" />
+    <Content Include="contents\FileManeager\fileman\LICENSE.txt" />
+    <Content Include="contents\FileManeager\fileman\third-party.txt" />
+    <Content Include="contents\FileManeager\fileman\Uploads\Images\DSC_2987.jpg" />
+    <Content Include="contents\FileManeager\fileman\Uploads\Images\DSC_5744.jpg" />
+    <Content Include="contents\FileManeager\fileman\Uploads\LICENSE.txt" />
+    <Content Include="contents\FileManeager\fileman\Uploads\roxy-fileman-logo.gif" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\less\core.less" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\less\list.less" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\less\path.less" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="contents\fonts\Bad_Script\BadScript-Regular.ttf" />
+    <Content Include="contents\fonts\iransans\eot\IRANSans%28FaNum%29_Medium.eot" />
+    <Content Include="contents\fonts\iransans\eot\IRANSansWeb%28FaNum%29.eot" />
+    <Content Include="contents\fonts\iransans\eot\IRANSansWeb%28FaNum%29_Bold.eot" />
+    <Content Include="contents\fonts\iransans\eot\IRANSansWeb%28FaNum%29_Light.eot" />
+    <Content Include="contents\fonts\iransans\eot\IRANSansWeb%28FaNum%29_Medium.eot" />
+    <Content Include="contents\fonts\iransans\eot\IRANSansWeb%28FaNum%29_UltraLight.eot" />
+    <Content Include="contents\fonts\iransans\ttf\IRANSansWeb%28FaNum%29.ttf" />
+    <Content Include="contents\fonts\iransans\ttf\IRANSansWeb%28FaNum%29_Bold.ttf" />
+    <Content Include="contents\fonts\iransans\ttf\IRANSansWeb%28FaNum%29_Light.ttf" />
+    <Content Include="contents\fonts\iransans\ttf\IRANSansWeb%28FaNum%29_Medium.ttf" />
+    <Content Include="contents\fonts\iransans\ttf\IRANSansWeb%28FaNum%29_UltraLight.ttf" />
+    <Content Include="contents\fonts\iransans\woff2\IRANSansWeb%28FaNum%29.woff2" />
+    <Content Include="contents\fonts\iransans\woff2\IRANSansWeb%28FaNum%29_Bold.woff2" />
+    <Content Include="contents\fonts\iransans\woff2\IRANSansWeb%28FaNum%29_Light.woff2" />
+    <Content Include="contents\fonts\iransans\woff2\IRANSansWeb%28FaNum%29_Medium.woff2" />
+    <Content Include="contents\fonts\iransans\woff2\IRANSansWeb%28FaNum%29_UltraLight.woff2" />
+    <Content Include="contents\fonts\iransans\woff\IRANSansWeb%28FaNum%29.woff" />
+    <Content Include="contents\fonts\iransans\woff\IRANSansWeb%28FaNum%29_Bold.woff" />
+    <Content Include="contents\fonts\iransans\woff\IRANSansWeb%28FaNum%29_Light.woff" />
+    <Content Include="contents\fonts\iransans\woff\IRANSansWeb%28FaNum%29_Medium.woff" />
+    <Content Include="contents\fonts\iransans\woff\IRANSansWeb%28FaNum%29_UltraLight.woff" />
+    <Content Include="contents\fonts\linea-icons\linea-arrows-10.eot" />
+    <Content Include="contents\fonts\linea-icons\linea-arrows-10.ttf" />
+    <Content Include="contents\fonts\linea-icons\linea-arrows-10.woff" />
+    <Content Include="contents\fonts\linea-icons\linea-arrows-10d41dd41d.eot" />
+    <Content Include="contents\fonts\linea-icons\linea-basic-10.eot" />
+    <Content Include="contents\fonts\linea-icons\linea-basic-10.ttf" />
+    <Content Include="contents\fonts\linea-icons\linea-basic-10.woff" />
+    <Content Include="contents\fonts\linea-icons\linea-basic-10d41dd41d.eot" />
+    <Content Include="contents\fonts\linea-icons\linea-basic-elaboration-10.eot" />
+    <Content Include="contents\fonts\linea-icons\linea-basic-elaboration-10.ttf" />
+    <Content Include="contents\fonts\linea-icons\linea-basic-elaboration-10.woff" />
+    <Content Include="contents\fonts\linea-icons\linea-basic-elaboration-10d41dd41d.eot" />
+    <Content Include="contents\fonts\linea-icons\linea-ecommerce-10.eot" />
+    <Content Include="contents\fonts\linea-icons\linea-ecommerce-10.ttf" />
+    <Content Include="contents\fonts\linea-icons\linea-ecommerce-10.woff" />
+    <Content Include="contents\fonts\linea-icons\linea-ecommerce-10d41dd41d.eot" />
+    <Content Include="contents\fonts\linea-icons\linea-music-10.eot" />
+    <Content Include="contents\fonts\linea-icons\linea-music-10.ttf" />
+    <Content Include="contents\fonts\linea-icons\linea-music-10.woff" />
+    <Content Include="contents\fonts\linea-icons\linea-music-10d41dd41d.eot" />
+    <Content Include="contents\fonts\linea-icons\linea-software-10.eot" />
+    <Content Include="contents\fonts\linea-icons\linea-software-10.ttf" />
+    <Content Include="contents\fonts\linea-icons\linea-software-10.woff" />
+    <Content Include="contents\fonts\linea-icons\linea-software-10d41dd41d.eot" />
+    <Content Include="contents\fonts\linea-icons\linea-weather-10.eot" />
+    <Content Include="contents\fonts\linea-icons\linea-weather-10.ttf" />
+    <Content Include="contents\fonts\linea-icons\linea-weather-10.woff" />
+    <Content Include="contents\fonts\linea-icons\linea-weather-10d41dd41d.eot" />
+    <Content Include="contents\fonts\material-design-iconic-font\Material-Design-Iconic-Fontd1f1.ttf" />
+    <Content Include="contents\fonts\material-design-iconic-font\Material-Design-Iconic-Fontd1f1.woff" />
+    <Content Include="contents\fonts\pe-icon-7\Pe-icon-7-strokebb1d.eot" />
+    <Content Include="contents\fonts\pe-icon-7\Pe-icon-7-strokebb1d.ttf" />
+    <Content Include="contents\fonts\pe-icon-7\Pe-icon-7-strokebb1d.woff" />
+    <Content Include="contents\fonts\pe-icon-7\Pe-icon-7-stroked41d.eot" />
+    <Content Include="contents\fonts\Roboto\Roboto-Black.ttf" />
+    <Content Include="contents\fonts\Roboto\Roboto-BlackItalic.ttf" />
+    <Content Include="contents\fonts\Roboto\Roboto-Bold.ttf" />
+    <Content Include="contents\fonts\Roboto\Roboto-BoldItalic.ttf" />
+    <Content Include="contents\fonts\Roboto\Roboto-Italic.ttf" />
+    <Content Include="contents\fonts\Roboto\Roboto-Light.ttf" />
+    <Content Include="contents\fonts\Roboto\Roboto-LightItalic.ttf" />
+    <Content Include="contents\fonts\Roboto\Roboto-Medium.ttf" />
+    <Content Include="contents\fonts\Roboto\Roboto-MediumItalic.ttf" />
+    <Content Include="contents\fonts\Roboto\Roboto-Regular.ttf" />
+    <Content Include="contents\fonts\Roboto\Roboto-Thin.ttf" />
+    <Content Include="contents\fonts\Roboto\Roboto-ThinItalic.ttf" />
+    <Content Include="contents\fonts\simple-line-icons\Simple-Line-Icons4c824c82.eot" />
+    <Content Include="contents\fonts\simple-line-icons\Simple-Line-Icons4c824c82.ttf" />
+    <Content Include="contents\fonts\simple-line-icons\Simple-Line-Icons4c824c82.woff" />
+    <Content Include="contents\fonts\simple-line-icons\Simple-Line-Iconsd41dd41d.eot" />
+    <Content Include="contents\fonts\themify-icons\themify9f24.eot" />
+    <Content Include="contents\fonts\themify-icons\themify9f24.ttf" />
+    <Content Include="contents\fonts\themify-icons\themify9f24.woff" />
+    <Content Include="contents\fonts\themify-icons\themifyd41d.eot" />
+    <Content Include="contents\tinymce\langs\readme.md" />
+    <Content Include="contents\tinymce\skins\lightgray\fonts\tinymce-mobile.woff" />
+    <Content Include="contents\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="contents\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="contents\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="contents\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="contents\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="contents\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="contents\FileManeager\fileman\asp_net\main.ashx" />
+    <Content Include="contents\FileManeager\fileman\conf.json" />
+    <Content Include="contents\FileManeager\fileman\lang\bg.json" />
+    <Content Include="contents\FileManeager\fileman\lang\ca.json" />
+    <Content Include="contents\FileManeager\fileman\lang\cs.json" />
+    <Content Include="contents\FileManeager\fileman\lang\cs1.json" />
+    <Content Include="contents\FileManeager\fileman\lang\da.json" />
+    <Content Include="contents\FileManeager\fileman\lang\de.json" />
+    <Content Include="contents\FileManeager\fileman\lang\en.json" />
+    <Content Include="contents\FileManeager\fileman\lang\es.json" />
+    <Content Include="contents\FileManeager\fileman\lang\fr.json" />
+    <Content Include="contents\FileManeager\fileman\lang\hu.json" />
+    <Content Include="contents\FileManeager\fileman\lang\it.json" />
+    <Content Include="contents\FileManeager\fileman\lang\nl.json" />
+    <Content Include="contents\FileManeager\fileman\lang\pl.json" />
+    <Content Include="contents\FileManeager\fileman\lang\pt.json" />
+    <Content Include="contents\FileManeager\fileman\lang\ru.json" />
+    <Content Include="contents\FileManeager\fileman\lang\sk.json" />
+    <Content Include="contents\FileManeager\fileman\lang\tr.json" />
+    <Content Include="contents\FileManeager\fileman\web.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\NiksoftV1.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404Pages\404P1.html" />
+    <Content Include="contents\bootstrap\css\bootstrap-rtl.css" />
+    <Content Include="contents\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="contents\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="contents\bootstrap\css\bootstrap.css" />
+    <Content Include="contents\bootstrap\css\bootstrap.min.css" />
+    <Content Include="contents\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="contents\bootstrap\js\bootstrap.min.js" />
+    <Content Include="contents\bootstrap\js\npm.js" />
+    <Content Include="contents\codemirror5\addon\comment\comment.js" />
+    <Content Include="contents\codemirror5\addon\comment\continuecomment.js" />
+    <Content Include="contents\codemirror5\addon\dialog\dialog.css" />
+    <Content Include="contents\codemirror5\addon\dialog\dialog.js" />
+    <Content Include="contents\codemirror5\addon\display\autorefresh.js" />
+    <Content Include="contents\codemirror5\addon\display\fullscreen.css" />
+    <Content Include="contents\codemirror5\addon\display\fullscreen.js" />
+    <Content Include="contents\codemirror5\addon\display\panel.js" />
+    <Content Include="contents\codemirror5\addon\display\placeholder.js" />
+    <Content Include="contents\codemirror5\addon\display\rulers.js" />
+    <Content Include="contents\codemirror5\addon\edit\closebrackets.js" />
+    <Content Include="contents\codemirror5\addon\edit\closetag.js" />
+    <Content Include="contents\codemirror5\addon\edit\continuelist.js" />
+    <Content Include="contents\codemirror5\addon\edit\matchbrackets.js" />
+    <Content Include="contents\codemirror5\addon\edit\matchtags.js" />
+    <Content Include="contents\codemirror5\addon\edit\trailingspace.js" />
+    <Content Include="contents\codemirror5\addon\fold\brace-fold.js" />
+    <Content Include="contents\codemirror5\addon\fold\comment-fold.js" />
+    <Content Include="contents\codemirror5\addon\fold\foldcode.js" />
+    <Content Include="contents\codemirror5\addon\fold\foldgutter.css" />
+    <Content Include="contents\codemirror5\addon\fold\foldgutter.js" />
+    <Content Include="contents\codemirror5\addon\fold\indent-fold.js" />
+    <Content Include="contents\codemirror5\addon\fold\markdown-fold.js" />
+    <Content Include="contents\codemirror5\addon\fold\xml-fold.js" />
+    <Content Include="contents\codemirror5\addon\hint\anyword-hint.js" />
+    <Content Include="contents\codemirror5\addon\hint\css-hint.js" />
+    <Content Include="contents\codemirror5\addon\hint\html-hint.js" />
+    <Content Include="contents\codemirror5\addon\hint\javascript-hint.js" />
+    <Content Include="contents\codemirror5\addon\hint\show-hint.css" />
+    <Content Include="contents\codemirror5\addon\hint\show-hint.js" />
+    <Content Include="contents\codemirror5\addon\hint\sql-hint.js" />
+    <Content Include="contents\codemirror5\addon\hint\xml-hint.js" />
+    <Content Include="contents\codemirror5\addon\lint\coffeescript-lint.js" />
+    <Content Include="contents\codemirror5\addon\lint\css-lint.js" />
+    <Content Include="contents\codemirror5\addon\lint\html-lint.js" />
+    <Content Include="contents\codemirror5\addon\lint\javascript-lint.js" />
+    <Content Include="contents\codemirror5\addon\lint\json-lint.js" />
+    <Content Include="contents\codemirror5\addon\lint\lint.css" />
+    <Content Include="contents\codemirror5\addon\lint\lint.js" />
+    <Content Include="contents\codemirror5\addon\lint\yaml-lint.js" />
+    <Content Include="contents\codemirror5\addon\merge\merge.css" />
+    <Content Include="contents\codemirror5\addon\merge\merge.js" />
+    <Content Include="contents\codemirror5\addon\mode\loadmode.js" />
+    <Content Include="contents\codemirror5\addon\mode\multiplex.js" />
+    <Content Include="contents\codemirror5\addon\mode\multiplex_test.js" />
+    <Content Include="contents\codemirror5\addon\mode\overlay.js" />
+    <Content Include="contents\codemirror5\addon\mode\simple.js" />
+    <Content Include="contents\codemirror5\addon\runmode\colorize.js" />
+    <Content Include="contents\codemirror5\addon\runmode\runmode-standalone.js" />
+    <Content Include="contents\codemirror5\addon\runmode\runmode.js" />
+    <Content Include="contents\codemirror5\addon\runmode\runmode.node.js" />
+    <Content Include="contents\codemirror5\addon\scroll\annotatescrollbar.js" />
+    <Content Include="contents\codemirror5\addon\scroll\scrollpastend.js" />
+    <Content Include="contents\codemirror5\addon\scroll\simplescrollbars.css" />
+    <Content Include="contents\codemirror5\addon\scroll\simplescrollbars.js" />
+    <Content Include="contents\codemirror5\addon\search\jump-to-line.js" />
+    <Content Include="contents\codemirror5\addon\search\match-highlighter.js" />
+    <Content Include="contents\codemirror5\addon\search\matchesonscrollbar.css" />
+    <Content Include="contents\codemirror5\addon\search\matchesonscrollbar.js" />
+    <Content Include="contents\codemirror5\addon\search\search.js" />
+    <Content Include="contents\codemirror5\addon\search\searchcursor.js" />
+    <Content Include="contents\codemirror5\addon\selection\active-line.js" />
+    <Content Include="contents\codemirror5\addon\selection\mark-selection.js" />
+    <Content Include="contents\codemirror5\addon\selection\selection-pointer.js" />
+    <Content Include="contents\codemirror5\addon\tern\tern.css" />
+    <Content Include="contents\codemirror5\addon\tern\tern.js" />
+    <Content Include="contents\codemirror5\addon\tern\worker.js" />
+    <Content Include="contents\codemirror5\addon\wrap\hardwrap.js" />
+    <Content Include="contents\codemirror5\lib\codemirror.css" />
+    <Content Include="contents\codemirror5\lib\codemirror.js" />
+    <Content Include="contents\codemirror5\mode\apl\apl.js" />
+    <Content Include="contents\codemirror5\mode\apl\index.html" />
+    <Content Include="contents\codemirror5\mode\asciiarmor\asciiarmor.js" />
+    <Content Include="contents\codemirror5\mode\asciiarmor\index.html" />
+    <Content Include="contents\codemirror5\mode\asn.1\asn.1.js" />
+    <Content Include="contents\codemirror5\mode\asn.1\index.html" />
+    <Content Include="contents\codemirror5\mode\asterisk\asterisk.js" />
+    <Content Include="contents\codemirror5\mode\asterisk\index.html" />
+    <Content Include="contents\codemirror5\mode\brainfuck\brainfuck.js" />
+    <Content Include="contents\codemirror5\mode\brainfuck\index.html" />
+    <Content Include="contents\codemirror5\mode\clike\clike.js" />
+    <Content Include="contents\codemirror5\mode\clike\index.html" />
+    <Content Include="contents\codemirror5\mode\clike\scala.html" />
+    <Content Include="contents\codemirror5\mode\clike\test.js" />
+    <Content Include="contents\codemirror5\mode\clojure\clojure.js" />
+    <Content Include="contents\codemirror5\mode\clojure\index.html" />
+    <Content Include="contents\codemirror5\mode\cmake\cmake.js" />
+    <Content Include="contents\codemirror5\mode\cmake\index.html" />
+    <Content Include="contents\codemirror5\mode\cobol\cobol.js" />
+    <Content Include="contents\codemirror5\mode\cobol\index.html" />
+    <Content Include="contents\codemirror5\mode\coffeescript\coffeescript.js" />
+    <Content Include="contents\codemirror5\mode\coffeescript\index.html" />
+    <Content Include="contents\codemirror5\mode\commonlisp\commonlisp.js" />
+    <Content Include="contents\codemirror5\mode\commonlisp\index.html" />
+    <Content Include="contents\codemirror5\mode\crystal\crystal.js" />
+    <Content Include="contents\codemirror5\mode\crystal\index.html" />
+    <Content Include="contents\codemirror5\mode\css\css.js" />
+    <Content Include="contents\codemirror5\mode\css\gss_test.js" />
+    <Content Include="contents\codemirror5\mode\css\less_test.js" />
+    <Content Include="contents\codemirror5\mode\css\scss_test.js" />
+    <Content Include="contents\codemirror5\mode\css\test.js" />
+    <Content Include="contents\codemirror5\mode\cypher\cypher.js" />
+    <Content Include="contents\codemirror5\mode\cypher\index.html" />
+    <Content Include="contents\codemirror5\mode\cypher\test.js" />
+    <Content Include="contents\codemirror5\mode\dart\dart.js" />
+    <Content Include="contents\codemirror5\mode\dart\index.html" />
+    <Content Include="contents\codemirror5\mode\diff\diff.js" />
+    <Content Include="contents\codemirror5\mode\diff\index.html" />
+    <Content Include="contents\codemirror5\mode\django\django.js" />
+    <Content Include="contents\codemirror5\mode\django\index.html" />
+    <Content Include="contents\codemirror5\mode\dockerfile\dockerfile.js" />
+    <Content Include="contents\codemirror5\mode\dockerfile\index.html" />
+    <Content Include="contents\codemirror5\mode\dtd\dtd.js" />
+    <Content Include="contents\codemirror5\mode\dtd\index.html" />
+    <Content Include="contents\codemirror5\mode\dylan\dylan.js" />
+    <Content Include="contents\codemirror5\mode\dylan\index.html" />
+    <Content Include="contents\codemirror5\mode\dylan\test.js" />
+    <Content Include="contents\codemirror5\mode\d\d.js" />
+    <Content Include="contents\codemirror5\mode\d\index.html" />
+    <Content Include="contents\codemirror5\mode\d\test.js" />
+    <Content Include="contents\codemirror5\mode\ebnf\ebnf.js" />
+    <Content Include="contents\codemirror5\mode\ebnf\index.html" />
+    <Content Include="contents\codemirror5\mode\ecl\ecl.js" />
+    <Content Include="contents\codemirror5\mode\ecl\index.html" />
+    <Content Include="contents\codemirror5\mode\eiffel\eiffel.js" />
+    <Content Include="contents\codemirror5\mode\eiffel\index.html" />
+    <Content Include="contents\codemirror5\mode\elm\elm.js" />
+    <Content Include="contents\codemirror5\mode\elm\index.html" />
+    <Content Include="contents\codemirror5\mode\erlang\erlang.js" />
+    <Content Include="contents\codemirror5\mode\erlang\index.html" />
+    <Content Include="contents\codemirror5\mode\factor\factor.js" />
+    <Content Include="contents\codemirror5\mode\factor\index.html" />
+    <Content Include="contents\codemirror5\mode\fcl\fcl.js" />
+    <Content Include="contents\codemirror5\mode\fcl\index.html" />
+    <Content Include="contents\codemirror5\mode\forth\forth.js" />
+    <Content Include="contents\codemirror5\mode\forth\index.html" />
+    <Content Include="contents\codemirror5\mode\fortran\fortran.js" />
+    <Content Include="contents\codemirror5\mode\fortran\index.html" />
+    <Content Include="contents\codemirror5\mode\gas\gas.js" />
+    <Content Include="contents\codemirror5\mode\gas\index.html" />
+    <Content Include="contents\codemirror5\mode\gfm\gfm.js" />
+    <Content Include="contents\codemirror5\mode\gfm\index.html" />
+    <Content Include="contents\codemirror5\mode\gfm\test.js" />
+    <Content Include="contents\codemirror5\mode\gherkin\gherkin.js" />
+    <Content Include="contents\codemirror5\mode\gherkin\index.html" />
+    <Content Include="contents\codemirror5\mode\go\go.js" />
+    <Content Include="contents\codemirror5\mode\go\index.html" />
+    <Content Include="contents\codemirror5\mode\groovy\groovy.js" />
+    <Content Include="contents\codemirror5\mode\groovy\index.html" />
+    <Content Include="contents\codemirror5\mode\haml\haml.js" />
+    <Content Include="contents\codemirror5\mode\haml\index.html" />
+    <Content Include="contents\codemirror5\mode\haml\test.js" />
+    <Content Include="contents\codemirror5\mode\handlebars\handlebars.js" />
+    <Content Include="contents\codemirror5\mode\handlebars\index.html" />
+    <Content Include="contents\codemirror5\mode\haskell-literate\haskell-literate.js" />
+    <Content Include="contents\codemirror5\mode\haskell-literate\index.html" />
+    <Content Include="contents\codemirror5\mode\haskell\haskell.js" />
+    <Content Include="contents\codemirror5\mode\haskell\index.html" />
+    <Content Include="contents\codemirror5\mode\haxe\haxe.js" />
+    <Content Include="contents\codemirror5\mode\haxe\index.html" />
+    <Content Include="contents\codemirror5\mode\htmlembedded\htmlembedded.js" />
+    <Content Include="contents\codemirror5\mode\htmlembedded\index.html" />
+    <Content Include="contents\codemirror5\mode\htmlmixed\htmlmixed.js" />
+    <Content Include="contents\codemirror5\mode\http\http.js" />
+    <Content Include="contents\codemirror5\mode\http\index.html" />
+    <Content Include="contents\codemirror5\mode\idl\idl.js" />
+    <Content Include="contents\codemirror5\mode\idl\index.html" />
+    <Content Include="contents\codemirror5\mode\javascript\index.html" />
+    <Content Include="contents\codemirror5\mode\javascript\javascript.js" />
+    <Content Include="contents\codemirror5\mode\javascript\json-ld.html" />
+    <Content Include="contents\codemirror5\mode\javascript\test.js" />
+    <Content Include="contents\codemirror5\mode\javascript\typescript.html" />
+    <Content Include="contents\codemirror5\mode\jinja2\index.html" />
+    <Content Include="contents\codemirror5\mode\jinja2\jinja2.js" />
+    <Content Include="contents\codemirror5\mode\jsx\index.html" />
+    <Content Include="contents\codemirror5\mode\jsx\jsx.js" />
+    <Content Include="contents\codemirror5\mode\jsx\test.js" />
+    <Content Include="contents\codemirror5\mode\julia\index.html" />
+    <Content Include="contents\codemirror5\mode\julia\julia.js" />
+    <Content Include="contents\codemirror5\mode\livescript\index.html" />
+    <Content Include="contents\codemirror5\mode\livescript\livescript.js" />
+    <Content Include="contents\codemirror5\mode\lua\index.html" />
+    <Content Include="contents\codemirror5\mode\lua\lua.js" />
+    <Content Include="contents\codemirror5\mode\markdown\index.html" />
+    <Content Include="contents\codemirror5\mode\markdown\markdown.js" />
+    <Content Include="contents\codemirror5\mode\markdown\test.js" />
+    <Content Include="contents\codemirror5\mode\mathematica\index.html" />
+    <Content Include="contents\codemirror5\mode\mathematica\mathematica.js" />
+    <Content Include="contents\codemirror5\mode\mbox\index.html" />
+    <Content Include="contents\codemirror5\mode\mbox\mbox.js" />
+    <Content Include="contents\codemirror5\mode\meta.js" />
+    <Content Include="contents\codemirror5\mode\mirc\index.html" />
+    <Content Include="contents\codemirror5\mode\mirc\mirc.js" />
+    <Content Include="contents\codemirror5\mode\mllike\index.html" />
+    <Content Include="contents\codemirror5\mode\mllike\mllike.js" />
+    <Content Include="contents\codemirror5\mode\modelica\index.html" />
+    <Content Include="contents\codemirror5\mode\modelica\modelica.js" />
+    <Content Include="contents\codemirror5\mode\mscgen\index.html" />
+    <Content Include="contents\codemirror5\mode\mscgen\mscgen.js" />
+    <Content Include="contents\codemirror5\mode\mscgen\mscgen_test.js" />
+    <Content Include="contents\codemirror5\mode\mscgen\msgenny_test.js" />
+    <Content Include="contents\codemirror5\mode\mscgen\xu_test.js" />
+    <Content Include="contents\codemirror5\mode\mumps\index.html" />
+    <Content Include="contents\codemirror5\mode\mumps\mumps.js" />
+    <Content Include="contents\codemirror5\mode\nginx\index.html" />
+    <Content Include="contents\codemirror5\mode\nginx\nginx.js" />
+    <Content Include="contents\codemirror5\mode\nsis\index.html" />
+    <Content Include="contents\codemirror5\mode\nsis\nsis.js" />
+    <Content Include="contents\codemirror5\mode\ntriples\index.html" />
+    <Content Include="contents\codemirror5\mode\ntriples\ntriples.js" />
+    <Content Include="contents\codemirror5\mode\octave\index.html" />
+    <Content Include="contents\codemirror5\mode\octave\octave.js" />
+    <Content Include="contents\codemirror5\mode\oz\index.html" />
+    <Content Include="contents\codemirror5\mode\oz\oz.js" />
+    <Content Include="contents\codemirror5\mode\pascal\index.html" />
+    <Content Include="contents\codemirror5\mode\pascal\pascal.js" />
+    <Content Include="contents\codemirror5\mode\pegjs\index.html" />
+    <Content Include="contents\codemirror5\mode\pegjs\pegjs.js" />
+    <Content Include="contents\codemirror5\mode\perl\index.html" />
+    <Content Include="contents\codemirror5\mode\perl\perl.js" />
+    <Content Include="contents\codemirror5\mode\php\index.html" />
+    <Content Include="contents\codemirror5\mode\php\php.js" />
+    <Content Include="contents\codemirror5\mode\php\test.js" />
+    <Content Include="contents\codemirror5\mode\pig\index.html" />
+    <Content Include="contents\codemirror5\mode\pig\pig.js" />
+    <Content Include="contents\codemirror5\mode\powershell\index.html" />
+    <Content Include="contents\codemirror5\mode\powershell\powershell.js" />
+    <Content Include="contents\codemirror5\mode\powershell\test.js" />
+    <Content Include="contents\codemirror5\mode\properties\index.html" />
+    <Content Include="contents\codemirror5\mode\properties\properties.js" />
+    <Content Include="contents\codemirror5\mode\protobuf\index.html" />
+    <Content Include="contents\codemirror5\mode\protobuf\protobuf.js" />
+    <Content Include="contents\codemirror5\mode\pug\index.html" />
+    <Content Include="contents\codemirror5\mode\pug\pug.js" />
+    <Content Include="contents\codemirror5\mode\puppet\index.html" />
+    <Content Include="contents\codemirror5\mode\puppet\puppet.js" />
+    <Content Include="contents\codemirror5\mode\python\index.html" />
+    <Content Include="contents\codemirror5\mode\python\python.js" />
+    <Content Include="contents\codemirror5\mode\python\test.js" />
+    <Content Include="contents\codemirror5\mode\q\index.html" />
+    <Content Include="contents\codemirror5\mode\q\q.js" />
+    <Content Include="contents\codemirror5\mode\rpm\changes\index.html" />
+    <Content Include="contents\codemirror5\mode\rpm\index.html" />
+    <Content Include="contents\codemirror5\mode\rpm\rpm.js" />
+    <Content Include="contents\codemirror5\mode\rst\index.html" />
+    <Content Include="contents\codemirror5\mode\rst\rst.js" />
+    <Content Include="contents\codemirror5\mode\ruby\index.html" />
+    <Content Include="contents\codemirror5\mode\ruby\ruby.js" />
+    <Content Include="contents\codemirror5\mode\ruby\test.js" />
+    <Content Include="contents\codemirror5\mode\rust\index.html" />
+    <Content Include="contents\codemirror5\mode\rust\rust.js" />
+    <Content Include="contents\codemirror5\mode\rust\test.js" />
+    <Content Include="contents\codemirror5\mode\r\index.html" />
+    <Content Include="contents\codemirror5\mode\r\r.js" />
+    <Content Include="contents\codemirror5\mode\sass\index.html" />
+    <Content Include="contents\codemirror5\mode\sass\sass.js" />
+    <Content Include="contents\codemirror5\mode\sass\test.js" />
+    <Content Include="contents\codemirror5\mode\sas\index.html" />
+    <Content Include="contents\codemirror5\mode\sas\sas.js" />
+    <Content Include="contents\codemirror5\mode\scheme\index.html" />
+    <Content Include="contents\codemirror5\mode\scheme\scheme.js" />
+    <Content Include="contents\codemirror5\mode\shell\index.html" />
+    <Content Include="contents\codemirror5\mode\shell\shell.js" />
+    <Content Include="contents\codemirror5\mode\shell\test.js" />
+    <Content Include="contents\codemirror5\mode\sieve\index.html" />
+    <Content Include="contents\codemirror5\mode\sieve\sieve.js" />
+    <Content Include="contents\codemirror5\mode\slim\index.html" />
+    <Content Include="contents\codemirror5\mode\slim\slim.js" />
+    <Content Include="contents\codemirror5\mode\slim\test.js" />
+    <Content Include="contents\codemirror5\mode\smalltalk\index.html" />
+    <Content Include="contents\codemirror5\mode\smalltalk\smalltalk.js" />
+    <Content Include="contents\codemirror5\mode\smarty\index.html" />
+    <Content Include="contents\codemirror5\mode\smarty\smarty.js" />
+    <Content Include="contents\codemirror5\mode\solr\index.html" />
+    <Content Include="contents\codemirror5\mode\solr\solr.js" />
+    <Content Include="contents\codemirror5\mode\soy\soy.js" />
+    <Content Include="contents\codemirror5\mode\soy\test.js" />
+    <Content Include="contents\codemirror5\mode\sparql\sparql.js" />
+    <Content Include="contents\codemirror5\mode\spreadsheet\spreadsheet.js" />
+    <Content Include="contents\codemirror5\mode\sql\sql.js" />
+    <Content Include="contents\codemirror5\mode\stex\stex.js" />
+    <Content Include="contents\codemirror5\mode\stex\test.js" />
+    <Content Include="contents\codemirror5\mode\stylus\stylus.js" />
+    <Content Include="contents\codemirror5\mode\swift\swift.js" />
+    <Content Include="contents\codemirror5\mode\swift\test.js" />
+    <Content Include="contents\codemirror5\mode\tcl\tcl.js" />
+    <Content Include="contents\codemirror5\mode\textile\test.js" />
+    <Content Include="contents\codemirror5\mode\textile\textile.js" />
+    <Content Include="contents\codemirror5\mode\tiddlywiki\tiddlywiki.css" />
+    <Content Include="contents\codemirror5\mode\tiddlywiki\tiddlywiki.js" />
+    <Content Include="contents\codemirror5\mode\tiki\tiki.css" />
+    <Content Include="contents\codemirror5\mode\tiki\tiki.js" />
+    <Content Include="contents\codemirror5\mode\toml\toml.js" />
+    <Content Include="contents\codemirror5\mode\tornado\tornado.js" />
+    <Content Include="contents\codemirror5\mode\troff\troff.js" />
+    <Content Include="contents\codemirror5\mode\ttcn-cfg\ttcn-cfg.js" />
+    <Content Include="contents\codemirror5\mode\ttcn\ttcn.js" />
+    <Content Include="contents\codemirror5\mode\turtle\turtle.js" />
+    <Content Include="contents\codemirror5\mode\twig\twig.js" />
+    <Content Include="contents\codemirror5\mode\vbscript\vbscript.js" />
+    <Content Include="contents\codemirror5\mode\vb\vb.js" />
+    <Content Include="contents\codemirror5\mode\velocity\velocity.js" />
+    <Content Include="contents\codemirror5\mode\verilog\test.js" />
+    <Content Include="contents\codemirror5\mode\verilog\verilog.js" />
+    <Content Include="contents\codemirror5\mode\vhdl\vhdl.js" />
+    <Content Include="contents\codemirror5\mode\vue\vue.js" />
+    <Content Include="contents\codemirror5\mode\webidl\webidl.js" />
+    <Content Include="contents\codemirror5\mode\xml\test.js" />
+    <Content Include="contents\codemirror5\mode\xml\xml.js" />
+    <Content Include="contents\codemirror5\mode\xquery\index.html" />
+    <Content Include="contents\codemirror5\mode\xquery\test.js" />
+    <Content Include="contents\codemirror5\mode\xquery\xquery.js" />
+    <Content Include="contents\codemirror5\mode\yacas\index.html" />
+    <Content Include="contents\codemirror5\mode\yacas\yacas.js" />
+    <Content Include="contents\codemirror5\mode\yaml-frontmatter\index.html" />
+    <Content Include="contents\codemirror5\mode\yaml-frontmatter\yaml-frontmatter.js" />
+    <Content Include="contents\codemirror5\mode\yaml\index.html" />
+    <Content Include="contents\codemirror5\mode\yaml\yaml.js" />
+    <Content Include="contents\codemirror5\mode\z80\index.html" />
+    <Content Include="contents\codemirror5\mode\z80\z80.js" />
+    <Content Include="contents\codemirror5\theme\3024-day.css" />
+    <Content Include="contents\codemirror5\theme\3024-night.css" />
+    <Content Include="contents\codemirror5\theme\abcdef.css" />
+    <Content Include="contents\codemirror5\theme\ambiance-mobile.css" />
+    <Content Include="contents\codemirror5\theme\ambiance.css" />
+    <Content Include="contents\codemirror5\theme\base16-dark.css" />
+    <Content Include="contents\codemirror5\theme\base16-light.css" />
+    <Content Include="contents\codemirror5\theme\bespin.css" />
+    <Content Include="contents\codemirror5\theme\blackboard.css" />
+    <Content Include="contents\codemirror5\theme\cobalt.css" />
+    <Content Include="contents\codemirror5\theme\colorforth.css" />
+    <Content Include="contents\codemirror5\theme\dracula.css" />
+    <Content Include="contents\codemirror5\theme\duotone-dark.css" />
+    <Content Include="contents\codemirror5\theme\duotone-light.css" />
+    <Content Include="contents\codemirror5\theme\eclipse.css" />
+    <Content Include="contents\codemirror5\theme\elegant.css" />
+    <Content Include="contents\codemirror5\theme\erlang-dark.css" />
+    <Content Include="contents\codemirror5\theme\hopscotch.css" />
+    <Content Include="contents\codemirror5\theme\icecoder.css" />
+    <Content Include="contents\codemirror5\theme\isotope.css" />
+    <Content Include="contents\codemirror5\theme\lesser-dark.css" />
+    <Content Include="contents\codemirror5\theme\liquibyte.css" />
+    <Content Include="contents\codemirror5\theme\material.css" />
+    <Content Include="contents\codemirror5\theme\mbo.css" />
+    <Content Include="contents\codemirror5\theme\mdn-like.css" />
+    <Content Include="contents\codemirror5\theme\midnight.css" />
+    <Content Include="contents\codemirror5\theme\monokai.css" />
+    <Content Include="contents\codemirror5\theme\neat.css" />
+    <Content Include="contents\codemirror5\theme\neo.css" />
+    <Content Include="contents\codemirror5\theme\night.css" />
+    <Content Include="contents\codemirror5\theme\panda-syntax.css" />
+    <Content Include="contents\codemirror5\theme\paraiso-dark.css" />
+    <Content Include="contents\codemirror5\theme\paraiso-light.css" />
+    <Content Include="contents\codemirror5\theme\pastel-on-dark.css" />
+    <Content Include="contents\codemirror5\theme\railscasts.css" />
+    <Content Include="contents\codemirror5\theme\rubyblue.css" />
+    <Content Include="contents\codemirror5\theme\seti.css" />
+    <Content Include="contents\codemirror5\theme\solarized.css" />
+    <Content Include="contents\codemirror5\theme\the-matrix.css" />
+    <Content Include="contents\codemirror5\theme\tomorrow-night-bright.css" />
+    <Content Include="contents\codemirror5\theme\tomorrow-night-eighties.css" />
+    <Content Include="contents\codemirror5\theme\ttcn.css" />
+    <Content Include="contents\codemirror5\theme\twilight.css" />
+    <Content Include="contents\codemirror5\theme\vibrant-ink.css" />
+    <Content Include="contents\codemirror5\theme\xq-dark.css" />
+    <Content Include="contents\codemirror5\theme\xq-light.css" />
+    <Content Include="contents\codemirror5\theme\yeti.css" />
+    <Content Include="contents\codemirror5\theme\zenburn.css" />
+    <Content Include="contents\css\animate.css" />
+    <Content Include="contents\css\NikCss.css" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="contents\font-awesome\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="contents\fonts\Bad_Script\OFL.txt" />
+    <Content Include="contents\fonts\linea-icons\linea-arrows-10.svg" />
+    <Content Include="contents\fonts\linea-icons\linea-basic-10.svg" />
+    <Content Include="contents\fonts\linea-icons\linea-basic-elaboration-10.svg" />
+    <Content Include="contents\fonts\linea-icons\linea-ecommerce-10.svg" />
+    <Content Include="contents\fonts\linea-icons\linea-music-10.svg" />
+    <Content Include="contents\fonts\linea-icons\linea-software-10.svg" />
+    <Content Include="contents\fonts\linea-icons\linea-weather-10.svg" />
+    <Content Include="contents\fonts\pe-icon-7\Pe-icon-7-strokebb1d.svg" />
+    <Content Include="contents\fonts\Roboto\LICENSE.txt" />
+    <Content Include="contents\fonts\simple-line-icons\Simple-Line-Icons4c824c82.svg" />
+    <Content Include="contents\fonts\themify-icons\themify9f24.svg" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\images\ui-icons_222222_256x240.png" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\images\ui-icons_a83300_256x240.png" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\jquery-ui.css" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\jquery-ui.js" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\jquery-ui.min.css" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\jquery-ui.min.js" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\jquery-ui.structure.css" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\jquery-ui.structure.min.css" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\jquery-ui.theme.css" />
+    <Content Include="contents\jquery-ui-1.12.1.custom\jquery-ui.theme.min.css" />
+    <Content Include="contents\js\EngineScript.js" />
+    <Content Include="contents\js\jquery-1.10.2.min.js" />
+    <Content Include="contents\js\jquery3.js" />
+    <Content Include="contents\nikplayer\jwplayer.js" />
+    <Content Include="contents\noty\noty.css" />
+    <Content Include="contents\noty\noty.min.js" />
+    <Content Include="contents\select2\css\select2.min.css" />
+    <Content Include="contents\select2\js\select2.full.min.js" />
+    <Content Include="contents\tinymce\jquery.tinymce.min.js" />
+    <Content Include="contents\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\codesample\css\prism.css" />
+    <Content Include="contents\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="contents\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\help\img\logo.png" />
+    <Content Include="contents\tinymce\plugins\help\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\imagetools\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\toc\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="contents\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="contents\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="contents\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="contents\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="contents\tinymce\skins\lightgray\content.mobile.min.css" />
+    <Content Include="contents\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="contents\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="contents\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="contents\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="contents\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="contents\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="contents\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="contents\tinymce\skins\lightgray\skin.mobile.min.css" />
+    <Content Include="contents\tinymce\themes\inlite\theme.min.js" />
+    <Content Include="contents\tinymce\themes\mobile\theme.min.js" />
+    <Content Include="contents\tinymce\themes\modern\theme.min.js" />
+    <Content Include="contents\tinymce\tinymce.min.js" />
+    <Content Include="demo.ascx" />
+    <Content Include="files\FekrBartar\Blogs\b1.jpg" />
+    <Content Include="files\FekrBartar\Blogs\b2.jpg" />
+    <Content Include="files\FekrBartar\Blogs\b3.jpg" />
+    <Content Include="files\FekrBartar\Blogs\b4.jpg" />
+    <Content Include="files\FekrBartar\Blogs\b5.jpg" />
+    <Content Include="files\FekrBartar\Blogs\b6.jpg" />
+    <Content Include="files\NikSoft\Fav\201834736NikSoftLogo.png" />
+    <Content Include="Global.asax" />
+    <Content Include="images\EmptySound.jpg" />
+    <Content Include="images\EmptyVideo.jpg" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\NikmehrLogo.png" />
+    <Content Include="images\NikSoftLogo.png" />
+    <Content Include="images\user-none-image.png" />
+    <Content Include="images\widget-icon.png" />
+    <Content Include="index.aspx" />
+    <Content Include="Modules\BaseModules\EngineBase\EmptyModule.ascx" />
+    <Content Include="Modules\BaseModules\EngineBase\LockPage.ascx" />
+    <Content Include="Modules\BaseModules\EngineBase\PanelModuleLoader.ascx" />
+    <Content Include="Modules\BaseModules\EngineBase\TemplateEngine.ascx" />
+    <Content Include="Modules\BaseModules\EngineBase\UserModuleLoader.ascx" />
+    <Content Include="Modules\BaseModules\EngineBase\WidgetContainer.ascx" />
+    <Content Include="Modules\BaseModules\EngineBase\WidgetLoader.ascx" />
+    <Content Include="Modules\BaseModules\FileManager\PanelFileManager.ascx" />
+    <Content Include="Modules\BaseModules\Menu\cu_Menu.ascx" />
+    <Content Include="Modules\BaseModules\Menu\rd_Menu.ascx" />
+    <Content Include="Modules\BaseModules\ModuleEdit\cu_Module.ascx" />
+    <Content Include="Modules\BaseModules\ModuleEdit\EditNikModule.ascx" />
+    <Content Include="Modules\BaseModules\ModuleEdit\rd_Module.ascx" />
+    <Content Include="Modules\BaseModules\ModuleEdit\ShowEditableModules.ascx" />
+    <Content Include="Modules\BaseModules\Notification\NotificationBar.ascx" />
+    <Content Include="Modules\BaseModules\Permission\DBManger.ascx" />
+    <Content Include="Modules\BaseModules\Permission\MenuAccess.ascx" />
+    <Content Include="Modules\BaseModules\Permission\ModuleAccess.ascx" />
+    <Content Include="Modules\BaseModules\Portal\cu_Portal.ascx" />
+    <Content Include="Modules\BaseModules\Portal\PortalDomain.ascx" />
+    <Content Include="Modules\BaseModules\Portal\rd_Portal.ascx" />
+    <Content Include="Modules\BaseModules\Setting\SystemSettingView.ascx" />
+    <Content Include="Modules\BaseModules\Template\cu_Template.ascx" />
+    <Content Include="Modules\BaseModules\Template\NullWidget.ascx" />
+    <Content Include="Modules\BaseModules\Template\PanelWidgetContainer.ascx" />
+    <Content Include="Modules\BaseModules\Template\rd_Template.ascx" />
+    <Content Include="Modules\BaseModules\Template\TemplateWidgets.ascx" />
+    <Content Include="Modules\BaseModules\Theme\cu_Theme.ascx" />
+    <Content Include="Modules\BaseModules\Theme\rd_Theme.ascx" />
+    <Content Include="Modules\BaseModules\Theme\ThemeCreator.ascx" />
+    <Content Include="Modules\BaseModules\Theme\ThemeEdit.ascx" />
+    <Content Include="Modules\BaseModules\User\cu_User.ascx" />
+    <Content Include="Modules\BaseModules\User\cu_UserType.ascx" />
+    <Content Include="Modules\BaseModules\User\cu_UserTypeGroup.ascx" />
+    <Content Include="Modules\BaseModules\User\Login.ascx" />
+    <Content Include="Modules\BaseModules\User\LogOut.ascx" />
+    <Content Include="Modules\BaseModules\User\PublicUserProfile.ascx" />
+    <Content Include="Modules\BaseModules\User\rd_User.ascx" />
+    <Content Include="Modules\BaseModules\User\rd_UserType.ascx" />
+    <Content Include="Modules\BaseModules\User\rd_UserTypeGroup.ascx" />
+    <Content Include="Modules\BaseModules\User\UserGroupManagement.ascx" />
+    <Content Include="Modules\BaseModules\User\UserLogin.ascx" />
+    <Content Include="Modules\BaseModules\User\UserRegister.ascx" />
+    <Content Include="Modules\BaseModules\User\UserSubGroupManagement.ascx" />
+    <Content Include="Modules\BaseModules\WidgetEdit\EditNikWidget.ascx" />
+    <Content Include="Modules\BaseModules\Widgets\W_NikPanelMenu.ascx" />
+    <Content Include="Modules\BaseModules\Widgets\W_PanelMenu.ascx" />
+    <Content Include="Modules\BaseModules\Widgets\W_UserDetailMenu.ascx" />
+    <Content Include="Modules\ContentManager\Panel\cu_ContentCategory.ascx" />
+    <Content Include="Modules\ContentManager\Panel\cu_ContentGroup.ascx" />
+    <Content Include="Modules\ContentManager\Panel\cu_GeneralMenuItem.ascx" />
+    <Content Include="Modules\ContentManager\Panel\cu_GeneralMenus.ascx" />
+    <Content Include="Modules\ContentManager\Panel\cu_PublicContent.ascx" />
+    <Content Include="Modules\ContentManager\Panel\PublicContentFiles.ascx" />
+    <Content Include="Modules\ContentManager\Panel\rd_ContentCategory.ascx" />
+    <Content Include="Modules\ContentManager\Panel\rd_ContentGroup.ascx" />
+    <Content Include="Modules\ContentManager\Panel\rd_GeneralMenuItem.ascx" />
+    <Content Include="Modules\ContentManager\WebService\ContentWebService.asmx" />
+    <Content Include="Templates\DefaultTheme\animate.css" />
+    <Content Include="Templates\DefaultTheme\DefaultHome.ascx" />
+    <Content Include="Templates\DefaultTheme\DefaultInner.ascx" />
+    <Content Include="Templates\DefaultTheme\Face1.css" />
+    <Content Include="Templates\DefaultTheme\Face1.js" />
+    <Content Include="Templates\DefaultTheme\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Templates\DefaultTheme\jquery.mCustomScrollbar.min.css" />
+    <Content Include="Templates\DefaultTheme\owl.carousel.min.css" />
+    <Content Include="Templates\DefaultTheme\owl.carousel.min.js" />
+    <Content Include="Templates\DefaultTheme\PanelDefaultHome.ascx" />
+    <Content Include="Templates\DefaultTheme\PanelDefaultInner.ascx" />
+    <Content Include="Templates\DefaultTheme\PanelStyle.css" />
+    <Content Include="Templates\DefaultTheme\UiScript.js" />
+    <Content Include="Templates\DefaultTheme\UiStyles.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebService\NikWebService.asmx" />
+    <Content Include="WebService\PortalWebService.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="demo.ascx.cs">
+      <DependentUpon>demo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demo.ascx.designer.cs">
+      <DependentUpon>demo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GlimpseSecurityPolicy.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\EngineBase\EmptyModule.ascx.cs">
+      <DependentUpon>EmptyModule.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\EngineBase\EmptyModule.ascx.designer.cs">
+      <DependentUpon>EmptyModule.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\EngineBase\LockPage.ascx.cs">
+      <DependentUpon>LockPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\EngineBase\LockPage.ascx.designer.cs">
+      <DependentUpon>LockPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\EngineBase\PanelModuleLoader.ascx.cs">
+      <DependentUpon>PanelModuleLoader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\EngineBase\PanelModuleLoader.ascx.designer.cs">
+      <DependentUpon>PanelModuleLoader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\EngineBase\UserModuleLoader.ascx.cs">
+      <DependentUpon>UserModuleLoader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\EngineBase\UserModuleLoader.ascx.designer.cs">
+      <DependentUpon>UserModuleLoader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\FileManager\PanelFileManager.ascx.cs">
+      <DependentUpon>PanelFileManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\FileManager\PanelFileManager.ascx.designer.cs">
+      <DependentUpon>PanelFileManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Menu\cu_Menu.ascx.cs">
+      <DependentUpon>cu_Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Menu\cu_Menu.ascx.designer.cs">
+      <DependentUpon>cu_Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Menu\rd_Menu.ascx.cs">
+      <DependentUpon>rd_Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Menu\rd_Menu.ascx.designer.cs">
+      <DependentUpon>rd_Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\ModuleEdit\cu_Module.ascx.cs">
+      <DependentUpon>cu_Module.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\ModuleEdit\cu_Module.ascx.designer.cs">
+      <DependentUpon>cu_Module.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\ModuleEdit\EditNikModule.ascx.cs">
+      <DependentUpon>EditNikModule.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\ModuleEdit\EditNikModule.ascx.designer.cs">
+      <DependentUpon>EditNikModule.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\ModuleEdit\rd_Module.ascx.cs">
+      <DependentUpon>rd_Module.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\ModuleEdit\rd_Module.ascx.designer.cs">
+      <DependentUpon>rd_Module.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\ModuleEdit\ShowEditableModules.ascx.cs">
+      <DependentUpon>ShowEditableModules.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\ModuleEdit\ShowEditableModules.ascx.designer.cs">
+      <DependentUpon>ShowEditableModules.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Notification\NotificationBar.ascx.cs">
+      <DependentUpon>NotificationBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Notification\NotificationBar.ascx.designer.cs">
+      <DependentUpon>NotificationBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Permission\DBManger.ascx.cs">
+      <DependentUpon>DBManger.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Permission\DBManger.ascx.designer.cs">
+      <DependentUpon>DBManger.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Permission\MenuAccess.ascx.cs">
+      <DependentUpon>MenuAccess.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Permission\MenuAccess.ascx.designer.cs">
+      <DependentUpon>MenuAccess.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Permission\ModuleAccess.ascx.cs">
+      <DependentUpon>ModuleAccess.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Permission\ModuleAccess.ascx.designer.cs">
+      <DependentUpon>ModuleAccess.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Portal\cu_Portal.ascx.cs">
+      <DependentUpon>cu_Portal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Portal\cu_Portal.ascx.designer.cs">
+      <DependentUpon>cu_Portal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Portal\PortalDomain.ascx.cs">
+      <DependentUpon>PortalDomain.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Portal\PortalDomain.ascx.designer.cs">
+      <DependentUpon>PortalDomain.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Portal\rd_Portal.ascx.cs">
+      <DependentUpon>rd_Portal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Portal\rd_Portal.ascx.designer.cs">
+      <DependentUpon>rd_Portal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Setting\SystemSettingView.ascx.cs">
+      <DependentUpon>SystemSettingView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Setting\SystemSettingView.ascx.designer.cs">
+      <DependentUpon>SystemSettingView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Template\cu_Template.ascx.cs">
+      <DependentUpon>cu_Template.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Template\cu_Template.ascx.designer.cs">
+      <DependentUpon>cu_Template.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Template\NullWidget.ascx.cs">
+      <DependentUpon>NullWidget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Template\NullWidget.ascx.designer.cs">
+      <DependentUpon>NullWidget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Template\PanelWidgetContainer.ascx.cs">
+      <DependentUpon>PanelWidgetContainer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Template\PanelWidgetContainer.ascx.designer.cs">
+      <DependentUpon>PanelWidgetContainer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Template\rd_Template.ascx.cs">
+      <DependentUpon>rd_Template.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Template\rd_Template.ascx.designer.cs">
+      <DependentUpon>rd_Template.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Template\TemplateWidgets.ascx.cs">
+      <DependentUpon>TemplateWidgets.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Template\TemplateWidgets.ascx.designer.cs">
+      <DependentUpon>TemplateWidgets.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Theme\cu_Theme.ascx.cs">
+      <DependentUpon>cu_Theme.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Theme\cu_Theme.ascx.designer.cs">
+      <DependentUpon>cu_Theme.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Theme\rd_Theme.ascx.cs">
+      <DependentUpon>rd_Theme.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Theme\rd_Theme.ascx.designer.cs">
+      <DependentUpon>rd_Theme.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Theme\ThemeCreator.ascx.cs">
+      <DependentUpon>ThemeCreator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Theme\ThemeCreator.ascx.designer.cs">
+      <DependentUpon>ThemeCreator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Theme\ThemeEdit.ascx.cs">
+      <DependentUpon>ThemeEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Theme\ThemeEdit.ascx.designer.cs">
+      <DependentUpon>ThemeEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\cu_User.ascx.cs">
+      <DependentUpon>cu_User.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\cu_User.ascx.designer.cs">
+      <DependentUpon>cu_User.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\cu_UserType.ascx.cs">
+      <DependentUpon>cu_UserType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\cu_UserType.ascx.designer.cs">
+      <DependentUpon>cu_UserType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\cu_UserTypeGroup.ascx.cs">
+      <DependentUpon>cu_UserTypeGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\cu_UserTypeGroup.ascx.designer.cs">
+      <DependentUpon>cu_UserTypeGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\LogOut.ascx.cs">
+      <DependentUpon>LogOut.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\LogOut.ascx.designer.cs">
+      <DependentUpon>LogOut.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\PublicUserProfile.ascx.cs">
+      <DependentUpon>PublicUserProfile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\PublicUserProfile.ascx.designer.cs">
+      <DependentUpon>PublicUserProfile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\rd_User.ascx.cs">
+      <DependentUpon>rd_User.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\rd_User.ascx.designer.cs">
+      <DependentUpon>rd_User.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\rd_UserType.ascx.cs">
+      <DependentUpon>rd_UserType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\rd_UserType.ascx.designer.cs">
+      <DependentUpon>rd_UserType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\rd_UserTypeGroup.ascx.cs">
+      <DependentUpon>rd_UserTypeGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\rd_UserTypeGroup.ascx.designer.cs">
+      <DependentUpon>rd_UserTypeGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\UserGroupManagement.ascx.cs">
+      <DependentUpon>UserGroupManagement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\UserGroupManagement.ascx.designer.cs">
+      <DependentUpon>UserGroupManagement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\UserLogin.ascx.cs">
+      <DependentUpon>UserLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\UserLogin.ascx.designer.cs">
+      <DependentUpon>UserLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\UserRegister.ascx.cs">
+      <DependentUpon>UserRegister.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\UserRegister.ascx.designer.cs">
+      <DependentUpon>UserRegister.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\UserSubGroupManagement.ascx.cs">
+      <DependentUpon>UserSubGroupManagement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\User\UserSubGroupManagement.ascx.designer.cs">
+      <DependentUpon>UserSubGroupManagement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\WidgetEdit\EditNikWidget.ascx.cs">
+      <DependentUpon>EditNikWidget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\WidgetEdit\EditNikWidget.ascx.designer.cs">
+      <DependentUpon>EditNikWidget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Widgets\W_NikPanelMenu.ascx.cs">
+      <DependentUpon>W_NikPanelMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Widgets\W_NikPanelMenu.ascx.designer.cs">
+      <DependentUpon>W_NikPanelMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Widgets\W_PanelMenu.ascx.cs">
+      <DependentUpon>W_PanelMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Widgets\W_PanelMenu.ascx.designer.cs">
+      <DependentUpon>W_PanelMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Widgets\W_UserDetailMenu.ascx.cs">
+      <DependentUpon>W_UserDetailMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseModules\Widgets\W_UserDetailMenu.ascx.designer.cs">
+      <DependentUpon>W_UserDetailMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NikSoft.Model\NikSoft.Model.csproj">
+      <Project>{ab2d46cc-4750-47e4-a4f9-d690a23bf46d}</Project>
+      <Name>NikSoft.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NikSoft.NikModel\NikSoft.NikModel.csproj">
+      <Project>{f6a8b6cc-bd3a-4484-87ef-1b5da2aa7af9}</Project>
+      <Name>NikSoft.NikModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NikSoft.PlugIn\NikSoft.PlugIn.csproj">
+      <Project>{324b1ade-ef9c-4917-95d1-080e958da21c}</Project>
+      <Name>NikSoft.PlugIn</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NikSoft.Routing\NikSoft.Routing.csproj">
+      <Project>{5669017d-e894-4b4a-b5fe-c503b3e5a9c8}</Project>
+      <Name>NikSoft.Routing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NikSoft.Services\NikSoft.Services.csproj">
+      <Project>{7ba6e4e6-655a-4987-a953-eaf74cf2a505}</Project>
+      <Name>NikSoft.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NikSoft.UILayer\NikSoft.UILayer.csproj">
+      <Project>{e025a07f-3612-48db-abd3-cb29b6fe92c6}</Project>
+      <Name>NikSoft.UILayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NikSoft.Utilities\NikSoft.Utilities.csproj">
+      <Project>{8f8bb2a4-4b91-4a84-905b-9430ba7f57e2}</Project>
+      <Name>NikSoft.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NikSoft.WebService\NikSoft.WebService.csproj">
+      <Project>{49273c91-8a49-4c9e-a003-92cac5627ea8}</Project>
+      <Name>NikSoft.WebService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlugIns\ContentManager\NikSoft.ContentManager.Service\NikSoft.ContentManager.Service.csproj">
+      <Project>{9803a3d9-faea-49ca-aa27-4c935d4aef9c}</Project>
+      <Name>NikSoft.ContentManager.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlugIns\ContentManager\NikSoft.ContentManager.WebService\NikSoft.ContentManager.WebService.csproj">
+      <Project>{46c7fe26-3085-4f9d-af4d-6eda11ea29eb}</Project>
+      <Name>NikSoft.ContentManager.WebService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlugIns\ContentManager\NikSoft.ContentManager.Web\NikSoft.ContentManager.Web.csproj">
+      <Project>{8d402342-aa08-4bfc-86c5-8333eeb1d359}</Project>
+      <Name>NikSoft.ContentManager.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlugIns\FormBuilder\NikSoft.FormBuilder.Service\NikSoft.FormBuilder.Service.csproj">
+      <Project>{7ac9458c-42af-401c-8baf-637a327d22e5}</Project>
+      <Name>NikSoft.FormBuilder.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlugIns\FormBuilder\NikSoft.FormBuilder.Web\NikSoft.FormBuilder.Web.csproj">
+      <Project>{0170c730-0493-4238-ab52-0d562d4776c9}</Project>
+      <Name>NikSoft.FormBuilder.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="contents\FileManeager\fileman\aspnet_client\system_web\2_0_50727\" />
+    <Folder Include="contents\FileManeager\fileman\aspnet_client\system_web\4_0_30319\" />
+    <Folder Include="contents\FileManeager\fileman\tmp\" />
+    <Folder Include="contents\FileManeager\fileman\Uploads\Documents\" />
+    <Folder Include="contents\FileManeager\fileman\Uploads\FLV\" />
+    <Folder Include="files\NikSoft\ContentFiles\" />
+    <Folder Include="files\NikSoft\ContentIcons\" />
+    <Folder Include="files\NikSoft\Menu\" />
+    <Folder Include="files\ShareModules\" />
+    <Folder Include="Modules\ContentManager\UI\" />
+    <Folder Include="Modules\ContentManager\Widget\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50995</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50719/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6A8B6CC-BD3A-4484-87EF-1B5DA2AA7AF9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NikSoft.NikModel</RootNamespace>
+    <AssemblyName>NikSoft.NikModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended, Version=6.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enum\AdminorUi.cs" />
+    <Compile Include="Enum\InstallState.cs" />
+    <Compile Include="Enum\NikSettingType.cs" />
+    <Compile Include="Enum\NikUserType.cs" />
+    <Compile Include="Enum\Notification.cs" />
+    <Compile Include="Enum\PortalLanguage.cs" />
+    <Compile Include="Enum\ResourceLinkType.cs" />
+    <Compile Include="Enum\TemplateType.cs" />
+    <Compile Include="Enum\UserGroupPermissionType.cs" />
+    <Compile Include="Map\NikMenuMap.cs" />
+    <Compile Include="Map\NikModuleDefinitionMap.cs" />
+    <Compile Include="Map\NikModuleMap.cs" />
+    <Compile Include="Map\NikSettingMap.cs" />
+    <Compile Include="Map\PortalAddressMap.cs" />
+    <Compile Include="Map\PortalMap.cs" />
+    <Compile Include="Map\TemplateFileMap.cs" />
+    <Compile Include="Map\TemplateMap.cs" />
+    <Compile Include="Map\ThemeMap.cs" />
+    <Compile Include="Map\UserMap.cs" />
+    <Compile Include="Map\UserProfileMap.cs" />
+    <Compile Include="Map\UserRoleMenuMap.cs" />
+    <Compile Include="Map\UserRolModuleMap.cs" />
+    <Compile Include="Map\UserTypeGroupMap.cs" />
+    <Compile Include="Map\UserTypeMap.cs" />
+    <Compile Include="Map\WidgetDefinitionMap.cs" />
+    <Compile Include="Map\WidgetMap.cs" />
+    <Compile Include="NikContext.cs" />
+    <Compile Include="Poco\NikMenu.cs" />
+    <Compile Include="Poco\NikModule.cs" />
+    <Compile Include="Poco\NikModuleDefinition.cs" />
+    <Compile Include="Poco\NikSetting.cs" />
+    <Compile Include="Poco\Portal.cs" />
+    <Compile Include="Poco\PortalAddress.cs" />
+    <Compile Include="Poco\Template.cs" />
+    <Compile Include="Poco\TemplateFile.cs" />
+    <Compile Include="Poco\Theme.cs" />
+    <Compile Include="Poco\User.cs" />
+    <Compile Include="Poco\UserProfile.cs" />
+    <Compile Include="Poco\UserRoleMenu.cs" />
+    <Compile Include="Poco\UserRoleModule.cs" />
+    <Compile Include="Poco\UserType.cs" />
+    <Compile Include="Poco\UserTypeGroup.cs" />
+    <Compile Include="Poco\Widget.cs" />
+    <Compile Include="Poco\WidgetDefinition.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\NikSoft.Model\NikSoft.Model.csproj">
+      <Project>{ab2d46cc-4750-47e4-a4f9-d690a23bf46d}</Project>
+      <Name>NikSoft.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlugIns\ContentManager\NikSoft.ContentManager.Service\NikSoft.ContentManager.Service.csproj">
+      <Project>{9803A3D9-FAEA-49CA-AA27-4C935D4AEF9C}</Project>
+      <Name>NikSoft.ContentManager.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

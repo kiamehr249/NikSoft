@@ -1,0 +1,401 @@
+﻿@font-face {
+     font-family: IRANSans;
+     font-style: normal;
+     font-weight: bold;
+     src: url('/contents/fonts/iransans/eot/IRANSansWeb(FaNum)_Bold.eot');
+     src: url('/contents/fonts/iransans/eot/IRANSansWeb(FaNum)_Bold.eot?#iefix') format('embedded-opentype'), 
+    /* IE6-8 */
+     url('/contents/fonts/iransans/woff2/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'), 
+    /* FF39+,Chrome36+, Opera24+*/
+     url('/contents/fonts/iransans/woff/IRANSansWeb(FaNum)_Bold.woff') format('woff'), 
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     url('/contents/fonts/iransans/ttf/IRANSansWeb(FaNum)_Bold.ttf') format('truetype');
+}
+ @font-face {
+     font-family: IRANSans;
+     font-style: normal;
+     font-weight: 500;
+     src: url('/contents/fonts/iransans/eot/IRANSansWeb(FaNum)_Medium.eot');
+     src: url('/contents/fonts/iransans/eot/IRANSansWeb(FaNum)_Medium.eot?#iefix') format('embedded-opentype'), 
+    /* IE6-8 */
+     url('/contents/fonts/iransans/woff2/IRANSansWeb(FaNum)_Medium.woff2') format('woff2'), 
+    /* FF39+,Chrome36+, Opera24+*/
+     url('/contents/fonts/iransans/woff/IRANSansWeb(FaNum)_Medium.woff') format('woff'), 
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     url('/contents/fonts/iransans/ttf/IRANSansWeb(FaNum)_Medium.ttf') format('truetype');
+}
+ @font-face {
+     font-family: IRANSans;
+     font-style: normal;
+     font-weight: 300;
+     src: url('/contents/fonts/iransans/eot/IRANSansWeb(FaNum)_Light.eot');
+     src: url('/contents/fonts/iransans/eot/IRANSansWeb(FaNum)_Light.eot?#iefix') format('embedded-opentype'), 
+    /* IE6-8 */
+     url('/contents/fonts/iransans/woff2/IRANSansWeb(FaNum)_Light.woff2') format('woff2'), 
+    /* FF39+,Chrome36+, Opera24+*/
+     url('/contents/fonts/iransans/woff/IRANSansWeb(FaNum)_Light.woff') format('woff'), 
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     url('/contents/fonts/iransans/ttf/IRANSansWeb(FaNum)_Light.ttf') format('truetype');
+}
+ @font-face {
+     font-family: IRANSans;
+     font-style: normal;
+     font-weight: 200;
+     src: url('/contents/fonts/iransans/IRANSansWeb(FaNum)_UltraLight.eot');
+     src: url('/contents/fonts/iransans/eot/IRANSansWeb(FaNum)_UltraLight.eot?#iefix') format('embedded-opentype'), 
+    /* IE6-8 */
+     url('/contents/fonts/iransans/woff2/IRANSansWeb(FaNum)_UltraLight.woff2') format('woff2'), 
+    /* FF39+,Chrome36+, Opera24+*/
+     url('/contents/fonts/iransans/woff/IRANSansWeb(FaNum)_UltraLight.woff') format('woff'), 
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     url('/contents/fonts/iransans/ttf/IRANSansWeb(FaNum)_UltraLight.ttf') format('truetype');
+}
+ @font-face {
+     font-family: IRANSans;
+     font-style: normal;
+     font-weight: normal;
+     src: url('/contents/fonts/iransans/eot/IRANSansWeb(FaNum).eot');
+     src: url('/contents/fonts/iransans/eot/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'), 
+    /* IE6-8 */
+     url('/contents/fonts/iransans/woff2/IRANSansWeb(FaNum).woff2') format('woff2'), 
+    /* FF39+,Chrome36+, Opera24+*/
+     url('/contents/fonts/iransans/woff/IRANSansWeb(FaNum).woff') format('woff'), 
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     url('/contents/fonts/iransans/ttf/IRANSansWeb(FaNum).ttf') format('truetype');
+}
+ body {
+     font-size: 14px;
+     font-style: normal;
+     line-height: 1.5;
+     background: #acb0b1;
+     overflow-x: hidden;
+     font-family: IRANSans, Tahoma, Geneva, sans-serif;
+}
+ .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+     font-family: IRANSans !important;
+}
+ .ui-widget {
+     font-family: IRANSans !important;
+}
+ .panel-nik {
+     margin-top: 30px;
+}
+ .fixed-sidebar-left {
+     position: fixed;
+     right: 0;
+     top: 66px;
+     bottom: 0;
+     background: #333;
+     z-index: 10;
+     border-right: 1px solid rgba(33, 33, 33, 0.1);
+     -webkit-transition: all 0.4s ease;
+     -moz-transition: all 0.4s ease;
+     transition: all 0.4s ease;
+     overflow: hidden;
+}
+ ul.sub-menu-hoder {
+     padding-left: 55px;
+}
+ .fixed-sidebar-left {
+     width: 70px;
+}
+ .fixed-sidebar-left:hover {
+     width: 280px;
+}
+ .fixed-sidebar-left .side-nav {
+     border: none;
+     height: 100%;
+     width: 100%;
+     position: relative;
+     border-radius: 0;
+     margin: 0;
+     backface-visibility: hidden;
+}
+ .fixed-sidebar-left .side-nav li {
+     width: 279px;
+     border: none;
+     line-height: 25px;
+}
+ .fixed-sidebar-left a.parent-menu {
+     position: relative;
+     display: block;
+     padding: 3px 5px;
+     text-shadow: 0 1px 0 rgb(48, 45, 9);
+}
+ .parent-menu i {
+     font-size: 25px;
+     width: 18px;
+     margin-left: 30px !important;
+     padding: 7px 20px;
+     text-transform: capitalize;
+     -webkit-transition: 0.3s ease;
+     -moz-transition: 0.3s ease;
+     transition: 0.3s ease;
+}
+ .clearfix {
+     overflow: hidden;
+     clear: both;
+     float: none;
+}
+ .parent-menu .nav > li > a:focus, .parent-menu .nav > li > a:hover {
+     text-decoration: none;
+     background-color: #fff;
+}
+ .page-wrapper {
+     margin-right: 55px;
+     padding: 66px 6px 60px 6px;
+     background: #000;
+     position: relative;
+     -webkit-transition: all 0.4s ease;
+     -moz-transition: all 0.4s ease;
+     transition: all 0.4s ease;
+     left: 0;
+     color: #fff;
+}
+ a.toggle-left-nav-btn {
+     color: #878787;
+     position: relative;
+     line-height: 66px;
+     display: inline-block;
+     margin-right: 20px;
+}
+ a.toggle-left-nav-btn i {
+     font-size: 21px;
+     vertical-align: middle;
+     color: #d09949;
+}
+ .navbar-fixed-top .nav-header {
+     width: 70px;
+     padding-right: 5px;
+     height: 66px;
+     -webkit-transition: 0.4s ease;
+     -moz-transition: 0.4s ease;
+     transition: 0.4s ease;
+     overflow: hidden;
+}
+ .navbar-fixed-top .nav-header .logo-wrap .brand-text {
+     display: inline-block;
+     color: #97ae20;
+     font-size: 21px;
+     text-transform: capitalize;
+     opacity: 1;
+     visibility: visible;
+     margin-left: 15px;
+}
+ .parent-menu {
+     color: #cf984e;
+     text-shadow: none;
+}
+ .parent-menu:hover {
+     background: #d19a4a !important;
+     color: #fff;
+}
+ .fixed-sidebar-left a.parent-menu:focus {
+     background: #d09949;
+     color: #fff;
+}
+ .sub-menu-hoder.collapse {
+     display: none;
+     border-bottom: 1px solid #5a5a5a;
+     padding-bottom: 10px;
+}
+ .fixed-sidebar-left:hover .sub-menu-hoder.collapse.in {
+     display: block;
+}
+ .wrapper.open-slide .page-wrapper {
+     margin-right: 280px;
+}
+ .wrapper.open-slide .fixed-sidebar-left {
+     width: 280px;
+}
+ .wrapper .mobile-only-brand .logo-wrap {
+     width: 65px;
+     margin-top: 7px;
+}
+ .mobile-only-nav ul.nav li.dropdown {
+     display: inline-block;
+     float: right;
+     min-width: 100px;
+}
+ .mobile-only-nav li.dropdown a.dropdown-toggle {
+     line-height: 66px;
+     padding: 0 9px;
+     color: #878787;
+}
+ .mobile-only-nav li.dropdown a.dropdown-toggle:hover, .mobile-only-nav li.dropdown a.dropdown-toggle:focus, .mobile-only-nav li.dropdown a.dropdown-toggle:active {
+     background: transparent !important;
+     color: #fff;
+}
+ .open-slide .nav-header {
+     width: 230px;
+}
+ .hover-slide .nav-header {
+     width: 230px;
+}
+ .navbar-fixed-top {
+     padding-right: 15px;
+}
+ .mobile-only-nav li.auth-drp a.dropdown-toggle {
+     color: #878787;
+     background: transparent !important;
+     -webkit-transition: 0.3s ease;
+     -moz-transition: 0.3s ease;
+     transition: 0.3s ease;
+     padding: 0 9px;
+     padding-right: 9px;
+     line-height: 66px;
+}
+ .mobile-only-nav li.auth-drp img {
+     width: 43px;
+     height: 43px;
+}
+ .navbar-fixed-top .mobile-only-nav ul.nav {
+     margin: 0;
+}
+ ul.dropdown-menu {
+     border-radius: 2px;
+     border: none;
+     background: #2a2a2a;
+     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.175);
+    /*! right: 0 !important;
+     */
+    /*! right: auto !important;
+     */
+}
+ ul.dropdown-menu {
+     padding: 0;
+}
+ ul.dropdown-menu a {
+     color: #fff !important;
+}
+ ul.dropdown-menu a i {
+     color: #878787;
+     font-size: 18px;
+     margin-right: 10px;
+     width: 18px;
+}
+ .dropdown-menu .divider {
+     background-color: rgba(255, 255, 255, 0.1);
+}
+ .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+     color: #fff;
+     background: rgba(255, 255, 255, 0.05);
+}
+ .panel-nik .panel-body {
+     color: #333;
+}
+ .sub-menu-hoder a {
+     color: #d09949;
+}
+ .footer {
+     color: #c78b3f;
+}
+ .wrapper .navbar-fixed-top {
+     padding: 0;
+}
+ .mobile-only-view {
+     display: none;
+     color: #878787;
+     line-height: 66px;
+     font-size: 18px;
+}
+ .mobile-only-view:hover {
+     color: #fff;
+}
+ .wrapper.m-left-open .mobile-only-nav {
+     top: 66px;
+}
+ .wrapper.m-left-open .fixed-sidebar-left {
+     top: 133px;
+}
+ .wrapper.open-slide .sub-menu-hoder.collapse.in {
+     display: block;
+}
+ .footer {
+     margin: 30px 0px 0 0;
+     border-top: 1px solid;
+     padding: 5px 15px 0 15px;
+     position: absolute;
+     bottom: 0;
+     left: 0px;
+     right: 0;
+}
+ .language-drp a.dropdown-toggle .language-icon {
+     border: 1px solid;
+     padding: 0 2px;
+     vertical-align: middle;
+}
+ .btn-language {
+     background: transparent;
+     color: #878787;
+     border: none;
+     text-shadow: none;
+     line-height: 30px;
+     display: block;
+     width: 100%;
+}
+ .btn-language:hover {
+     color: #fff;
+     background: #333;
+}
+ .language-drp ul.dropdown-menu {
+     min-width: 100px;
+}
+ .fixed-sidebar-left .parent-menu span.right-nav-text {
+     vertical-align: middle;
+     padding-bottom: 10px;
+}
+ ul.sub-menu-hoder {
+     padding-left: 77px;
+     padding-top: 15px;
+}
+ @media (max-width: 1024px) {
+     .mobile-only-nav {
+         position: absolute;
+         width: 100%;
+         top: 0;
+         transition: 0.4s ease;
+         -webkit-transition: 0.4s ease;
+         -moz-transition: 0.4s ease;
+         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+         padding: 0 15px;
+         background: #292929;
+    }
+     .mobile-only-brand {
+         position: relative;
+         width: 100%;
+         background: #212121;
+         z-index: 2;
+    }
+     .navbar-fixed-top .nav-header {
+         text-align: center;
+         width: 100%;
+    }
+     .wrapper .mobile-only-brand .logo-wrap {
+         width: 100%;
+    }
+     a.toggle-left-nav-btn {
+         position: absolute;
+         right: 1px;
+         top: 0;
+    }
+     .mobile-only-view {
+         display: block;
+         position: absolute;
+         left: 22px;
+         top: 0;
+    }
+     .fixed-sidebar-left {
+         margin-right: -280px;
+         width: 280px;
+    }
+     .wrapper.open-slide .page-wrapper {
+         margin-right: 280px;
+    }
+     .page-wrapper {
+         margin-right: 0;
+    }
+     .wrapper.open-slide .fixed-sidebar-left {
+         margin-right: 0;
+    }
+}

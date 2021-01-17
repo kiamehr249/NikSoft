@@ -1,0 +1,350 @@
+﻿body {
+    font-family: 'Roboto';
+    font-size: 14px;
+}
+
+.brand-img {
+    max-height: 46px;
+}
+/************ control css **************/
+.check-nik input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+.check-nik .chlabl {
+    vertical-align: middle;
+    padding-top: 5px;
+}
+
+.btn {
+    border: 1px solid #a1a1a1;
+}
+
+.btn-file-nik {
+    background: #333;
+    color: #fff;
+    text-shadow: none;
+}
+
+.btn-save-nik {
+    background: #0ea172;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #fff;
+    text-shadow: none;
+}
+
+.btn-create {
+    background: #33b67e;
+    color: #fff;
+    text-shadow: none;
+}
+
+.btn-edite {
+    background: orange;
+    color: #fff;
+    text-shadow: none;
+}
+
+.btn-remove, .btn-delete {
+    background: #d4315f;
+    text-shadow: none;
+    color: #fff;
+}
+
+.btn-search {
+    background: #2c66b1;
+    color: #fff;
+    text-shadow: none;
+}
+
+.btn-back-nik {
+    background: #333;
+    text-shadow: none;
+    color: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.btn-back-nik:hover, .btn-back-nik:focus {
+    color: #fff;
+    background: #000;
+}
+
+
+.panel-menu i {
+    font-size: 20px;
+    color: #869344;
+    margin-right: 5px;
+}
+
+.panel-menu .parent {
+}
+
+
+.panel-menu .dropdown-menu i {
+    display: inline-block;
+    font-size: 20px;
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.panel-menu .dropdown-menu span {
+    vertical-align: middle;
+}
+
+
+.btn-back {
+    background: #333;
+    text-shadow: none;
+    color: #fff;
+    border-color: #333;
+}
+
+
+.panel-options {
+    padding-top: 5px;
+}
+
+
+.panel-nik {
+    border: 1px solid #333;
+    box-shadow: 0px 2px 3px 1px #000;
+}
+
+    .panel-nik .panel-heading {
+        background: #2a2a2a;
+        color: #cf9848;
+        border-bottom: 1px solid #000;
+    }
+
+    .panel-nik .panel-footer {
+        background: #2a2a2a;
+        color: #cf984e;
+        border-top: 1px solid #333;
+    }
+
+.label-null {
+    margin-top: 24px;
+}
+
+.btn-back:hover {
+    color: #fff;
+    background: #000;
+}
+
+.btn-save-nik:hover {
+    background: #0b896a;
+    color: #fff;
+}
+
+.modulemain .container {
+    width: 100% !important;
+}
+
+.ui-sortable-handle fieldset {
+    padding: 15px;
+}
+
+.btn-info-nik {
+    background: #1a8fa2;
+    text-shadow: none;
+    color: #fff;
+    border-color: #23a6c2;
+}
+
+    .btn-info-nik:hover {
+        background: #157387;
+        border-color: #157387;
+        color: #fff;
+    }
+
+.panel-menu ul.navbar-nav {
+    display: block;
+    width: 85%;
+}
+
+    .panel-menu ul.navbar-nav li.logout-panel {
+        float: right;
+    }
+
+.btn-log {
+    color: #cf1543 !important;
+}
+
+.btn-enable {
+    background: #16cc8c;
+    color: #fff;
+}
+
+    .btn-enable:hover {
+        background: #14aa75;
+        color: #fff;
+    }
+
+.btn-disable {
+    background: #f2c505;
+    color: #fff;
+}
+
+    .btn-disable:hover {
+        background: #e0bc24;
+        color: #fff;
+    }
+
+body.persian-lang .rtl-switch .panel-options {
+    text-align: left;
+}
+
+.btn-folder {
+    background: #ec1a6c;
+    color: #fff;
+}
+
+    .btn-folder:hover {
+        background: #cb165c;
+        color: #fff;
+    }
+
+.image-icon-panel {
+    margin-top: 15px;
+    width: 90px;
+    box-shadow: 0px 0px 3px 1px #929292;
+    position: relative;
+}
+
+.file-remover-wrapper {
+    position: absolute;
+    top: 0;
+    right: -24px;
+}
+
+.remove-icon-holder {
+    position: relative;
+    font-size: 25px;
+    color: #363636;
+    line-height: 20px;
+}
+
+
+.btn-file-remover {
+    background: transparent;
+    border: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.image-icon-panel img {
+    max-width: 100%;
+}
+
+.file-details-panel i {
+  position: relative;
+  color: #363636;
+  font-size: 21px;
+  vertical-align: middle;
+}
+
+.file-details-panel span {
+  vertical-align: middle;
+}
+.file-details-panel {
+  margin-top: 15px;
+}
+
+.select-img {
+  position: relative;
+}
+
+.file-detail {
+  position: absolute;
+  padding: 10px;
+  min-width: 220px;
+  z-index: 10;
+  background: rgba(4, 1, 23, 0.8);
+  top: 45px;
+  text-align: center;
+  border-radius: 3px;
+  border-top-right-radius: 0;
+}
+
+.file-detail:before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 0;
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 8px solid rgba(4, 1, 23, 0.8);
+}
+
+.file-detail p {
+  margin: 0;
+  color: #f6dc19;
+}
+/************ end control css **************/
+
+
+.call-out {
+  margin: 15px 0;
+  padding: 15px 15px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.call-out h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.call-out:before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.call-out-info {
+  border: 1px solid #a4c8f0;
+  box-shadow: 0px 1px 2px 1px #d2d2d2;
+}
+
+.call-out-info h3 {
+  color: #3383db;
+}
+
+.call-out-info:before {
+  background: #3383db;
+}
+
+.checkboxlist {
+  display: block;
+  padding-right: 20px;
+}
+
+.full-btn-box {
+  background: #6c0eb9;
+  display: block;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  transition: all .3s;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.full-btn-box:hover {
+  background: #941df5;
+  text-decoration: none;
+  color: #fff;
+}
